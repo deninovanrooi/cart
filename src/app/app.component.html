@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <br><br><br>
+        <div class="custom-sidebar">
+          <div *ngFor="let item of listItems">
+            <a [routerLink]="item.link" class="btn btn-link" [ngClass]="{'btn-primary': item.isNew}">{{item.name}}</a>
+            <br><br>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  
